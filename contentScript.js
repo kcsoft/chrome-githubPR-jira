@@ -1,8 +1,5 @@
 const jiraURL = 'https://mobymax.atlassian.net/browse/';
 
-const baseNameElement = document.querySelector('.js-pull-header-details .gh-header-meta .base-ref a span');
-const headNameElement = document.querySelector('.js-pull-header-details .gh-header-meta .head-ref a span');
-
 for (let branch of ['.head-ref', '.base-ref']) {
   const domElement = document.querySelector(`.js-pull-header-details .gh-header-meta ${branch} a span`);
   if (domElement) {
