@@ -1,0 +1,23 @@
+{
+  "name": "JIRA link from github PR",
+  "description": "Injects a Jira link into a github pull request page with the issues matched from the git branch name",
+  "version": "1.0",
+  "manifest_version": 3,
+  "author": "kcsoft",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icon48.png"],
+      "matches": ["https://github.com/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/mobymax/*/pull/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
